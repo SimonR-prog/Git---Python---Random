@@ -1,6 +1,6 @@
-Weight tracker.
+Weight tracker;
 
-Utilize json to save the date, weight whether or not I went on a walk/exercised.
+Utilize json to save the date, weight and whether or not I went on a walk/exercised.
 
 Normal date format.
 Weight will be tracked with integer.
@@ -11,11 +11,14 @@ Functions needed;
 - Importer to bring in the information to print it and to utilize it.
 - UI;
 - Calculations to calc the weight week by week. And how much progress in total.
-
+- Take the input of weight and exercise.
+-
 
 While loop;
 - Clear the console.
-- Show the progress.
+- Show the progress by printing the data in the json.file with for loop.
+- Request the days weight.
+
 
 
 
