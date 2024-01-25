@@ -16,47 +16,56 @@ def importer():
 def writer(today_dict):
     # Function to write the information to the
     old_data = importer()
-    old_data.update(today_dict)
-    new_data = old_data
+    new_data = {}
+    for i in old_data:
+        new_data.update(i)
+    new_data.update(today_dict)
+    #new_data = old_data
     with open('weight_data.json', 'w') as f:
         f.write(json.dumps(new_data))
+
+def summary():
+    # Function to use on sundays to sum up the previous weeks data and put into json.file.
+
+    with open('weight_summary.json', 'w') as f:
+        f.write(json.dumps(new_data))
+
+    """ Need to find out which week it is and to take the weight of the first and last
+     day of the previous week and log the difference into a dictionary with the week
+     as the key to the value (weight)."""
+
 
 def ui():
     # Function to print out the data and ui.
     data_dict = importer()
     print("")
 
-def dict_creator(date):
+def dict_creator(date, weight, walk, gym):
     # Function to make todays dict with data and send to write function.
+    # Find out which day it is and make that the dictionaries name
+    from datetime import date
+    date = date.today()
+    day = date.weekday()
+     = {}
+
     today_dict = {}
     today_dict["date"] = f"{date}"
-    #today_dict["weight"] = weight
-    #today_dict["walk"] = walk
-    #today_dict["exercise"] = exercise
+    today_dict["weight"] = weight
+    today_dict["walk"] = walk
+    today_dict["gym"] = gym
+
     writer(today_dict)
 
 def data_input():
     from datetime import date
     date = date.today()
+    weight = int(input("How much do you weigh? > "))
     walk = float(input("How far did you walk? > "))
-    exercise = int(input("Did you go to the gym? > "))
-    dict_creator(date, walk, exercise)
+    gym = int(input("Did you go to the gym? (1 for yes, 0 for no.) > "))
+    dict_creator(date, weight, walk, gym)
 
 
 data_input()
-
-
-
-    # Continue;
-    # Make the date into the key for the rest of the data.
-    # Make it so that only the last week is saved?
-    # Can make it so that there are two different dicts,
-    # One with the weight difference between first and last day of the week.
-    # One with the
-
-
-
-
 
 
 

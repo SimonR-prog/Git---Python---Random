@@ -4,23 +4,34 @@ Utilize json to save the date, weight and whether or not I went on a walk/exerci
 
 Normal date format.
 Weight will be tracked with integer.
-Can maybe use walk and train as bools.
+Walk will be measured in distance, in float km, that will come from user input for now.
+    (Using samsung health app to get the distance.)
+
+Wants; (Things I would want to add in the future to make this into a real app.)
+    - A map that tracks the walks and distance.
+    - A
+
 
 Functions needed;
 - An exporter that creates and write to json.file.
 - Importer to bring in the information to print it and to utilize it.
 - UI;
 - Calculations to calc the weight week by week. And how much progress in total.
-- Take the input of weight and exercise.
--
+- Function to send the above data to separate json file.
+- Take the input of current weight, how many km walked and if I went to gym.
 
 While loop;
 - Clear the console.
 - Show the progress by printing the data in the json.file with for loop.
-- Request the days weight.
+- Start function to take todays data.
 
 
-
+Thoughts;
+    Should make it so that there are two different lists or txt files to hold the data.
+        One for holding one week at a time of data and the other is the summarized data
+        such as how far user walked that week and how much change in weight.
+    And for every week, check the weight difference between start and end of week and
+        add the difference as value for that week.
 
 
 
