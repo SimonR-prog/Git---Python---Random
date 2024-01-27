@@ -35,4 +35,8 @@ Thoughts;
 
 
 
+Need to take input of the data.
+Add it to a dictionary as values to respective keys.
+Add that dictionary to another dictionary that is named based on the number of the day
+    of the week.
 
