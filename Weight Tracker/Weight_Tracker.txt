@@ -33,10 +33,21 @@ Thoughts;
     And for every week, check the weight difference between start and end of week and
         add the difference as value for that week.
 
-
-
+Thoughts (2024-01-26)
 Need to take input of the data.
 Add it to a dictionary as values to respective keys.
 Add that dictionary to another dictionary that is named based on the number of the day
     of the week.
 
+Thoughts (2024-01-27);
+Maybe I should add a weekday key to the data and have the days number as the value.
+    Then I can take the first index of the week and compare it with the last index currently
+    in the file for that week and
+
+The summary function needs;
+    To sum up the total amount of km's that I have walked that week.
+    Sum up the total loss/gain in weight for that week.
+    Sum up how many times I went to the gym.
+
+    Maybe I only need to add the current days weight to the day key and let the walk/gym variables
+    simply increase in value with "+=" under the week key?

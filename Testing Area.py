@@ -1,14 +1,9 @@
-def current_week():
-    from datetime import date
-    week = date.today().isocalendar()[1]
-    return week
-
-
 
 
 print(current_week())
 
-
+weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+day = weekdays[(date.weekday())]
 
 
 def current_day():
